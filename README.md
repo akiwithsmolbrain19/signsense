@@ -63,3 +63,28 @@ sign sense/
 ├── train.csv            # Label mappings (sign names)
 ├── requirements.txt     # Dependency list (optional, for pip users)
 └── README.md            # This file
+
+🏃 Usage
+Ensure your webcam is connected.
+
+Run the script:
+
+PowerShell
+
+python main.py
+How to use:
+
+Stand back so your upper body and hands are visible.
+
+Perform a sign.
+
+The prediction will appear at the top left of the window.
+
+Press q to quit.
+
+⚠️ Troubleshooting
+"NumPy 2.x Error" / _ARRAY_API not found: This project requires NumPy 1.x because TensorFlow/MediaPipe are not yet updated for NumPy 2.0.
+
+Fix: Run uv pip install "numpy<2" or pip install "numpy<2".
+
+Laggy Video: Open main.py and find the mp_holistic.Holistic line. Change model_complexity=1 to model_complexity=0 for faster (but slightly less accurate) performance.
